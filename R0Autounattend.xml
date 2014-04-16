@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unattend xmlns="urn:schemas-microsoft-com:unattend">
+<settings pass="oobeSystem">
+    <component name="Microsoft-Windows-International-Core" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <InputLocale>en-GB</InputLocale>
+        <SystemLocale>en-GB</SystemLocale>
+        <UILanguage>en-GB</UILanguage>
+        <UILanguageFallback>en-GB</UILanguageFallback>
+        <UserLocale>en-GB</UserLocale>
+    </component>
+    <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <TimeZone>GMT Standard Time</TimeZone>
+        <UserAccounts>
+                <AdministratorPassword>
+		<Value>SECURITY-Pr0blem!</Value>
+		<PlainText>true</PlainText>
+		</AdministratorPassword>
+        </UserAccounts>
+        <OOBE>
+            <HideEULAPage>true</HideEULAPage>
+	    <HideOEMRegistrationScreen>true</HideOEMRegistrationScreen>
+        </OOBE>
+            <AutoLogon>
+                <Enabled>true</Enabled>
+                <LogonCount>1</LogonCount>
+                <Username>Administrator</Username>
+                <Password>
+		<Value>SECURITY-Pr0blem!</Value>
+		<PlainText>true</PlainText>
+		</Password>
+            </AutoLogon>
+	<FirstLogonCommands>
+	    <SynchronousCommand wcm:action="add">
+	    	<CommandLine>CMD /C C:\Scripts\PostSysprep1.bat</CommandLine>
+	    	<Description>Call Post Sysprep Configs 1</Description>
+	    	<Order>1</Order>
+	    	<RequiresUserInput>false</RequiresUserInput>
+	    </SynchronousCommand>
+	</FirstLogonCommands>
+    </component>
+</settings>
+<settings pass="specialize">
+    <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <ProductKey>48HP8-DN98B-MYWDG-T2DCC-8W83P</ProductKey>
+    </component>
+</settings>
+</unattend>

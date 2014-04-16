@@ -1,0 +1,13 @@
+ComputerName,NIC,MAC,DHCP,AddressFamily,IPAddress,PrefixLength,Type,DefaultGateway,DnsServerAddresses,DnsSuffix,TeamingMode,LoadBalancingAlgorithm,PolicyStore
+WIN2012A,HOST-MGMT-A,00-0C-29-67-66-C5,TRUE,,,,,,,,,,
+WIN2012A,HOST-MGMT-B,00-0C-29-67-66-CF,TRUE,,,,,,,,,,
+WIN2012A,VM-PROD-A,00-0C-29-67-66-D9,TRUE,,,,,,,,,,
+WIN2012A,VM-PROD-B,00-0C-29-67-66-E3,TRUE,,,,,,,,,,
+WIN2012A,HOST-MGMT-TEAM,,FALSE,IPv4,192.168.174.130,24,Unicast,192.168.174.254,192.168.174.1,local,SwitchIndependent,TransportPorts,ActiveStore
+WIN2012A,VM-PROD-TEAM,,FALSE,IPv4,,,,,,,SwitchIndependent,HyperVPort,
+WIN2012R2,HOST-MGMT-A,00-0C-29-97-82-F0,TRUE,,,,,,,,,,
+WIN2012R2,HOST-MGMT-B,00-0C-29-97-82-FA,TRUE,,,,,,,,,,
+WIN2012R2,VM-PROD-A,00-0C-29-97-82-04,TRUE,,,,,,,,,,
+WIN2012R2,VM-PROD-B,00-0C-29-97-82-0E,TRUE,,,,,,,,,,
+WIN2012R2,HOST-MGMT-TEAM,,FALSE,IPv4,192.168.174.131,24,Unicast,192.168.174.254,192.168.174.1,local,SwitchIndependent,TransportPorts,ActiveStore
+WIN2012R2,VM-PROD-TEAM,,FALSE,IPv4,,,,,,,SwitchIndependent,HyperVPort,
